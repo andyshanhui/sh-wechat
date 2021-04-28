@@ -1,0 +1,1 @@
+INSERT INTO `sh_sys_user` (`id`, `username`, `nickname`, `password`, `sex`, `avatar`, `status`, `last_login_ip`, `last_login_time`, `creator`, `create_time`, `regenerator`, `update_time`, `deleted`, `remark`) VALUES (4, 'Daneil', 'Daneil', '123456', '0', '', '0', '', NULL, '', NULL, '', NULL, '0', NULL);
