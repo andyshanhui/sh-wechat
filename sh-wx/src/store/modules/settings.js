@@ -1,0 +1,1 @@
+import defaultSettings from '@/settings'

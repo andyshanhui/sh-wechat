@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.sh-wechat</groupId>
+    <artifactId>sh-wechat</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>sh-wechat-wx</artifactId>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.sh-wechat</groupId>
+    	<artifactId>sh-wechat-core</artifactId>
+    	<exclusions>
+            <exclusion>
+                <artifactId>commons-lang</artifactId>
+                <groupId>commons-lang</groupId>
+            </exclusion>
+        </exclusions>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>com.sh-wechat</groupId>
+    	<artifactId>sh-wechat-db</artifactId>
+  	</dependency>
+  	
+    <dependency>
+        <groupId>com.github.binarywang</groupId>
+        <artifactId>weixin-java-pay</artifactId>
+        <exclusions>
+            <exclusion>
+                <artifactId>qrcode-utils</artifactId>
+                <groupId>com.github.binarywang</groupId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    
+    <dependency>
+        <groupId>com.github.binarywang</groupId>
+        <artifactId>weixin-java-miniapp</artifactId>
+    </dependency>
+    
+    <dependency>
+	     <groupId>io.springfox</groupId>
+		 <artifactId>springfox-swagger2</artifactId>
+	</dependency>
+	
+	<dependency>
+		<groupId>io.springfox</groupId>
+		<artifactId>springfox-swagger-ui</artifactId>
+	</dependency>
+	
+			<!--引入ui包-->
+	<dependency>
+		<groupId>com.github.xiaoymin</groupId>
+		<artifactId>swagger-bootstrap-ui</artifactId>
+	</dependency>
+	
+	<dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+    </dependency>
+    
+    <dependency>
+	    <groupId>com.auth0</groupId>
+	    <artifactId>java-jwt</artifactId>
+	</dependency>
+  	
+	<dependency>
+		<groupId>cn.hutool</groupId>
+		<artifactId>hutool-all</artifactId>
+	</dependency>
+  </dependencies>
+  
+  <build>
+      <plugins>
+          <plugin>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-maven-plugin</artifactId>
+              <executions>
+                  <execution>
+                      <id>repackage</id>
+                      <configuration>
+                          <executable>true</executable>
+                          <classifier>exec</classifier>
+                      </configuration>
+                  </execution>
+              </executions>
+          </plugin>
+      </plugins>
+  </build>
+</project>
